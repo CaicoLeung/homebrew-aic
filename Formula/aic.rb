@@ -1,25 +1,25 @@
 class Aic < Formula
   desc "AI-powered git commit message generator"
   homepage "https://github.com/CaicoLeung/aic"
-  version "0.4.6"
+  version "0.4.7"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/CaicoLeung/aic/releases/download/v0.4.6/aic-aarch64-apple-darwin.tar.gz"
-      sha256 "b10cabeb74388a657b2b9e4121df7a9a292c216ac6c22f9b84db69afc818b2a5"
+      url "https://github.com/CaicoLeung/aic/releases/download/v0.4.7/aic-aarch64-apple-darwin.tar.gz"
+      sha256 "65262582d1eff14f5dcc8b9a86b816f08b50c3c009f101c3bc96d19f068451da"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/CaicoLeung/aic/releases/download/v0.4.6/aic-x86_64-apple-darwin.tar.gz"
-      sha256 "290e5022bbd4d9a709f7ff77edbbc82ed328c89e2b243555eb4c7702cf7c91c8"
+      url "https://github.com/CaicoLeung/aic/releases/download/v0.4.7/aic-x86_64-apple-darwin.tar.gz"
+      sha256 "73eb91e5a5613fd8cfa4af1e06d4a6ec0a76fcb728b8f97fba3d3fabdcca8dc3"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/CaicoLeung/aic/releases/download/v0.4.6/aic-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "db28a92cf132f4c17c32fa62ddea9f1fe84588f7f86614dd6e2e253c820fe333"
+      url "https://github.com/CaicoLeung/aic/releases/download/v0.4.7/aic-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "ba7a3aa3bfdd84c4c49931b78dd3ffacf6c9248a4b2cb7531742c89add9561cc"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/CaicoLeung/aic/releases/download/v0.4.6/aic-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "9860c921cfc20470b499f3bf208c91b7484e001fc74c4ea45371f2454eb30301"
+      url "https://github.com/CaicoLeung/aic/releases/download/v0.4.7/aic-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "75ba5ee5852dac19651a1660e78e0967f8cb48130eb514c3776fdab93d915698"
     end
   end
   license "MIT"
