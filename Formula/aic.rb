@@ -1,35 +1,40 @@
 class Aic < Formula
   desc "AI-powered git commit message generator"
   homepage "https://github.com/CaicoLeung/aic"
-  version "0.4.8"
+  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/CaicoLeung/aic/releases/download/v0.4.8/aic-aarch64-apple-darwin.tar.gz"
-      sha256 "efed87b204c0ee128367a15baf9492d2c0f9269365cf8b637db5c66c005efb7b"
+      url "https://github.com/CaicoLeung/aic/releases/download/v0.5.0/aic-aarch64-apple-darwin.tar.gz"
+      sha256 "9acb9aac7eaaeb65f538f439bc92a9981003b581742a0707301215f1474c8b04"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/CaicoLeung/aic/releases/download/v0.4.8/aic-x86_64-apple-darwin.tar.gz"
-      sha256 "45876fa40c67f0300b735e9f2ccda5d041882de9c481310b1e820ee7cd2bc5d7"
+      url "https://github.com/CaicoLeung/aic/releases/download/v0.5.0/aic-x86_64-apple-darwin.tar.gz"
+      sha256 "573dba4c3d99c74cc62924e0e5c9cd5343058c2829806f23b99d6820be124c38"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/CaicoLeung/aic/releases/download/v0.4.8/aic-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "8c6342b677d990b32f62f688dc8931fa845f6d66e845031bd27d45f5511d2c89"
+      url "https://github.com/CaicoLeung/aic/releases/download/v0.5.0/aic-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "77dbafb72e658e293fa6f25914daded23e4c4686cfe619d8b7da2143f5c2143e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/CaicoLeung/aic/releases/download/v0.4.8/aic-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "57aa0a20de233ef7d3538cb62fd7af0e953e695dbb64fcf24d2892d0415c7ada"
+      url "https://github.com/CaicoLeung/aic/releases/download/v0.5.0/aic-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "bebc1ab4cfe0b9db29ff2f981b0f37f44cfd31839643e69d31dfe5b98cf9217e"
     end
   end
   license "MIT"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":      {},
-    "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin":       {},
-    "x86_64-pc-windows-gnu":     {},
-    "x86_64-unknown-linux-gnu":  {},
+    "aarch64-apple-darwin":               {},
+    "aarch64-unknown-linux-gnu":          {},
+    "aarch64-unknown-linux-musl-dynamic": {},
+    "aarch64-unknown-linux-musl-static":  {},
+    "arm-unknown-linux-gnueabihf":        {},
+    "x86_64-apple-darwin":                {},
+    "x86_64-pc-windows-gnu":              {},
+    "x86_64-unknown-linux-gnu":           {},
+    "x86_64-unknown-linux-musl-dynamic":  {},
+    "x86_64-unknown-linux-musl-static":   {},
   }.freeze
 
   def target_triple
