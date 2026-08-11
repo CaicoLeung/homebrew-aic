@@ -1,25 +1,25 @@
 class Aic < Formula
   desc "AI-powered git commit message generator"
   homepage "https://github.com/CaicoLeung/aic"
-  version "0.5.0"
+  version "0.5.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/CaicoLeung/aic/releases/download/v0.5.0/aic-aarch64-apple-darwin.tar.gz"
-      sha256 "9acb9aac7eaaeb65f538f439bc92a9981003b581742a0707301215f1474c8b04"
+      url "https://github.com/CaicoLeung/aic/releases/download/v0.5.1/aic-aarch64-apple-darwin.tar.gz"
+      sha256 "f1eaa8e80013c48b5f04aad0b3e3f48f08108b6df303719e29ccc6c71de77da2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/CaicoLeung/aic/releases/download/v0.5.0/aic-x86_64-apple-darwin.tar.gz"
-      sha256 "573dba4c3d99c74cc62924e0e5c9cd5343058c2829806f23b99d6820be124c38"
+      url "https://github.com/CaicoLeung/aic/releases/download/v0.5.1/aic-x86_64-apple-darwin.tar.gz"
+      sha256 "9b666c7beaa88cde5df6f9b3e45cfc229f6bfcfc66e8a0ecab91cf5a9fb1ddcb"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/CaicoLeung/aic/releases/download/v0.5.0/aic-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "77dbafb72e658e293fa6f25914daded23e4c4686cfe619d8b7da2143f5c2143e"
+      url "https://github.com/CaicoLeung/aic/releases/download/v0.5.1/aic-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "cd7e37be8ec0fc8c66dc3db94052a50c68295cda0484478f6e7573c8db0e60a0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/CaicoLeung/aic/releases/download/v0.5.0/aic-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "bebc1ab4cfe0b9db29ff2f981b0f37f44cfd31839643e69d31dfe5b98cf9217e"
+      url "https://github.com/CaicoLeung/aic/releases/download/v0.5.1/aic-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "c45b1c8ec38f1e8317f0c2c9bf7d34982df699b3ebe060c92f0b67c58275a423"
     end
   end
   license "MIT"
@@ -53,10 +53,18 @@ class Aic < Formula
   end
 
   def install
-    bin.install "aic" if OS.mac? && Hardware::CPU.arm?
-    bin.install "aic" if OS.mac? && Hardware::CPU.intel?
-    bin.install "aic" if OS.linux? && Hardware::CPU.arm?
-    bin.install "aic" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "aic"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "aic"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "aic"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "aic"
+    end
 
     install_binary_aliases!
 
